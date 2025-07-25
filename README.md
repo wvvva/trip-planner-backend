@@ -1,1 +1,1 @@
-# ai-project-management-backend
+# trip-planner-backend
