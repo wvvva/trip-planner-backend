@@ -3,7 +3,6 @@ package com.springboot.trip_planner_backend.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "transportation")
 @PrimaryKeyJoinColumn(name = "id")
 public class Transportation extends Activity{
     
