@@ -17,6 +17,9 @@ public class Persona {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    @ManyToMany(mappedBy = "personas")
+    private List<Trip> trips = new ArrayList<>();
+
     @OneToMany(mappedBy = "persona")
     private List<Document> documents = new ArrayList<>();
     

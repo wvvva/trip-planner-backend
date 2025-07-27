@@ -1,0 +1,91 @@
+type Query {
+    # Trip
+    getTrip(id: ID!): Trip
+    getNMostRecentTripByUserId(userId: ID!, n: Int!): [Trip]
+    getAllTripsByUserId(userId: ID!): [Trip]
+
+    getPlanningTripByUserId(userId: ID!): [Trip]
+    getConfirmedTripByUserId(userId: ID!): [Trip]
+    getInProgressTripByUserId(userId: ID!): [Trip]
+    getCompletedTripByUserId(userId: ID!): [Trip]
+    getCancelledTripByUserId(userId: ID!): [Trip]
+    
+    # Activity
+    getActivity(id: ID!): Activity
+    getAllActivitiesByTripId(tripId: ID!): [Activity]
+
+    # Persona
+    getPersona(id: ID!): Persona
+    getAllPersonasByUserId(userId: ID!): [Persona]
+    getPersonaByTripId(tripId: ID!): [Persona]
+}
+
+type Mutation {
+    createTrip(title: String!, status: TripStatus, budget: Float, type: TripType, personas: [Persona], activities: [Activity]): Trip
+    updateTrip(id: ID!, title: String!, status: TripStatus, budget: Float, type: TripType, personas: [Persona], activities: [Activity]): Trip
+    deleteTrip(id: ID!): Trip
+
+    createActivity(title: String!, description: String, tripId: ID!, destination: Destination, transportation: Transportation, accommodation: Accommodation, bookingReference: String, notes: String, cost: Float, startTime: String, endTime: String): Activity
+    updateActivity(id: ID!, title: String!, description: String, tripId: ID!, destination: Destination, transportation: Transportation, accommodation: Accommodation, bookingReference: String, notes: String, cost: Float, startTime: String, endTime: String): Activity
+    deleteActivity(id: ID!): Activity
+
+    createPersona(firstName: String!, lastName: String!, age: Int!, gender: String!, nationality: String!, ethnicity: String!, specialNeed: String!, preference: String!, documents: [Document]): Persona
+    updatePersona(id: ID!, firstName: String!, lastName: String!, age: Int!, gender: String!, nationality: String!, ethnicity: String!, specialNeed: String!, preference: String!, documents: [Document]): Persona
+    deletePersona(id: ID!): Persona
+}
+
+type Trip {
+    id: ID!
+    title: String!
+    userId: ID!
+    createdAt: String!
+    updatedAt: String!
+
+    status: TripStatus
+    budget: Float
+    type: TripType
+
+    activities: [Activity]
+    personas: [Persona]
+}
+
+type Activity {
+    id: ID!
+    title: String!
+    tripId: ID!
+
+    destination: Destination
+    transportation: Transportation
+    accommodation: Accommodation
+
+    bookingReference: String
+    notes: String
+    cost: Float
+
+    startTime: String
+    endTime: String
+
+    createdAt: String!
+    updatedAt: String!
+    isDeleted: Boolean
+}
+
+type Persona {
+    id: ID!
+
+    firstName: String!
+    middleName: String!
+    lastName: String!
+    age: Int!
+    gender: String!
+    nationality: String!
+    ethnicity: String!
+
+    specialNeed: String
+    preference: String
+
+    createdAt: String!
+    updatedAt: String!
+
+    documents: [Document]
+}
