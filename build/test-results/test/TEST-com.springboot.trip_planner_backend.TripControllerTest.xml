@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.springboot.trip_planner_backend.TripControllerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-07-27T19:35:56.110Z" hostname="deMacBook-Pro-2.hsd1.fl.comcast.net" time="0.009">
+  <properties/>
+  <testcase name="testCreateTrip()" classname="com.springboot.trip_planner_backend.TripControllerTest" time="0.009">
+    <failure message="org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.springboot.trip_planner_backend.TripControllerTest': Unsatisfied dependency expressed through field 'graphQlTester': No qualifying bean of type 'org.springframework.graphql.test.tester.GraphQlTester' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}" type="org.springframework.beans.factory.UnsatisfiedDependencyException">org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.springboot.trip_planner_backend.TripControllerTest': Unsatisfied dependency expressed through field 'graphQlTester': No qualifying bean of type 'org.springframework.graphql.test.tester.GraphQlTester' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at app//org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at app//org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at app//org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at app//org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:405)
+	at app//org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156)
+	at app//org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111)
+	at app//org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at app//org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at java.base@17.0.12/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base@17.0.12/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17.0.12/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base@17.0.12/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@17.0.12/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base@17.0.12/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@17.0.12/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17.0.12/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base@17.0.12/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base@17.0.12/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@17.0.12/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base@17.0.12/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.graphql.test.tester.GraphQlTester' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at app//org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[15:35:48.388 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.springboot.trip_planner_backend.TripControllerTest]: TripControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:35:48.596 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.springboot.trip_planner_backend.TripPlannerBackendApplication for test class com.springboot.trip_planner_backend.TripControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-07-27T15:35:49.281-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] c.s.t.TripControllerTest                 : Starting TripControllerTest using Java 17.0.12 with PID 27324 (started by VanessaWei in /Users/VanessaWei/Desktop/trip-planner-backend)
+2025-07-27T15:35:49.283-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] c.s.t.TripControllerTest                 : No active profile set, falling back to 1 default profile: "default"
+2025-07-27T15:35:50.279-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-27T15:35:50.471-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 11 JPA repository interfaces.
+2025-07-27T15:35:51.211-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-27T15:35:51.266-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-27T15:35:51.315-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-27T15:35:51.771-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-27T15:35:51.815-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-27T15:35:51.963-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ae6d078
+2025-07-27T15:35:51.965-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-27T15:35:52.007-04:00  WARN 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-27T15:35:52.036-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-27T15:35:53.773-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-27T15:35:53.790-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+Hibernate: 
+    set client_min_messages = WARNING
+2025-07-27T15:35:53.794-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists accommodation 
+       drop constraint if exists FK47hfepcgn6qs14fuxdop9ckiy
+Hibernate: 
+    alter table if exists accommodation 
+       drop constraint if exists FK47hfepcgn6qs14fuxdop9ckiy
+2025-07-27T15:35:53.797-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists activity 
+       drop constraint if exists FKfjid11fh3x9bbr2c78m2o1aks
+Hibernate: 
+    alter table if exists activity 
+       drop constraint if exists FKfjid11fh3x9bbr2c78m2o1aks
+2025-07-27T15:35:53.799-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists activity 
+       drop constraint if exists FK14q3exfg0yp2b8lb2fmbnxyde
+Hibernate: 
+    alter table if exists activity 
+       drop constraint if exists FK14q3exfg0yp2b8lb2fmbnxyde
+2025-07-27T15:35:53.801-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists destination 
+       drop constraint if exists FKlypn6unsmxpjemo6bs4ifa90l
+Hibernate: 
+    alter table if exists destination 
+       drop constraint if exists FKlypn6unsmxpjemo6bs4ifa90l
+2025-07-27T15:35:53.803-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists document 
+       drop constraint if exists FKhxb0mytjif1cdyrmaowj7o3gs
+Hibernate: 
+    alter table if exists document 
+       drop constraint if exists FKhxb0mytjif1cdyrmaowj7o3gs
+2025-07-27T15:35:53.805-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists driver_license 
+       drop constraint if exists FK4uquqovui7qm8mp1i2fhpbgcu
+Hibernate: 
+    alter table if exists driver_license 
+       drop constraint if exists FK4uquqovui7qm8mp1i2fhpbgcu
+2025-07-27T15:35:53.807-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists passport 
+       drop constraint if exists FKqbo6bxdgsmnlmw506g5uelv14
+Hibernate: 
+    alter table if exists passport 
+       drop constraint if exists FKqbo6bxdgsmnlmw506g5uelv14
+2025-07-27T15:35:53.809-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists persona 
+       drop constraint if exists FKdq2m6laiifgvrbylre9r4yw45
+Hibernate: 
+    alter table if exists persona 
+       drop constraint if exists FKdq2m6laiifgvrbylre9r4yw45
+2025-07-27T15:35:53.812-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists transportation 
+       drop constraint if exists FKth5ar5rlcqeceb4it5ymaw3s0
+Hibernate: 
+    alter table if exists transportation 
+       drop constraint if exists FKth5ar5rlcqeceb4it5ymaw3s0
+2025-07-27T15:35:53.814-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip 
+       drop constraint if exists FK8qawa54m8w5olt1mrn50re3yw
+Hibernate: 
+    alter table if exists trip 
+       drop constraint if exists FK8qawa54m8w5olt1mrn50re3yw
+2025-07-27T15:35:53.816-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip_persona 
+       drop constraint if exists FKmj4uv9pjvtyuuhf3m99ljldwe
+Hibernate: 
+    alter table if exists trip_persona 
+       drop constraint if exists FKmj4uv9pjvtyuuhf3m99ljldwe
+2025-07-27T15:35:53.817-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip_persona 
+       drop constraint if exists FKmcl0re8f6r8g42j007e1eybgc
+Hibernate: 
+    alter table if exists trip_persona 
+       drop constraint if exists FKmcl0re8f6r8g42j007e1eybgc
+2025-07-27T15:35:53.819-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists visa 
+       drop constraint if exists FK6xrho99g093yfl4w8eon15rgd
+Hibernate: 
+    alter table if exists visa 
+       drop constraint if exists FK6xrho99g093yfl4w8eon15rgd
+2025-07-27T15:35:53.822-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists accommodation cascade
+Hibernate: 
+    drop table if exists accommodation cascade
+2025-07-27T15:35:53.825-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists activity cascade
+Hibernate: 
+    drop table if exists activity cascade
+2025-07-27T15:35:53.829-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists destination cascade
+Hibernate: 
+    drop table if exists destination cascade
+2025-07-27T15:35:53.832-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists document cascade
+Hibernate: 
+    drop table if exists document cascade
+2025-07-27T15:35:53.835-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists driver_license cascade
+Hibernate: 
+    drop table if exists driver_license cascade
+2025-07-27T15:35:53.838-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists passport cascade
+Hibernate: 
+    drop table if exists passport cascade
+2025-07-27T15:35:53.840-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists persona cascade
+Hibernate: 
+    drop table if exists persona cascade
+2025-07-27T15:35:53.844-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists transportation cascade
+Hibernate: 
+    drop table if exists transportation cascade
+2025-07-27T15:35:53.847-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists trip cascade
+Hibernate: 
+    drop table if exists trip cascade
+2025-07-27T15:35:53.851-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists trip_persona cascade
+Hibernate: 
+    drop table if exists trip_persona cascade
+2025-07-27T15:35:53.853-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists users cascade
+Hibernate: 
+    drop table if exists users cascade
+2025-07-27T15:35:53.857-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists visa cascade
+Hibernate: 
+    drop table if exists visa cascade
+2025-07-27T15:35:53.864-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table accommodation (
+        has_breakfast boolean,
+        has_shuttle boolean,
+        id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table accommodation (
+        has_breakfast boolean,
+        has_shuttle boolean,
+        id bigint not null,
+        primary key (id)
+    )
+2025-07-27T15:35:53.870-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table activity (
+        cost float4,
+        is_deleted boolean not null,
+        created_at timestamp(6),
+        destination_id bigint,
+        end_time timestamp(6),
+        id bigint generated by default as identity,
+        start_time timestamp(6),
+        trip_id bigint not null,
+        updated_at timestamp(6),
+        booking_reference varchar(255),
+        description TEXT,
+        name varchar(255) not null,
+        notes TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    create table activity (
+        cost float4,
+        is_deleted boolean not null,
+        created_at timestamp(6),
+        destination_id bigint,
+        end_time timestamp(6),
+        id bigint generated by default as identity,
+        start_time timestamp(6),
+        trip_id bigint not null,
+        updated_at timestamp(6),
+        booking_reference varchar(255),
+        description TEXT,
+        name varchar(255) not null,
+        notes TEXT,
+        primary key (id)
+    )
+2025-07-27T15:35:53.877-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table destination (
+        is_deleted boolean not null,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        trip_id bigint not null,
+        updated_at timestamp(6),
+        address TEXT,
+        contact_number varchar(255),
+        description TEXT,
+        name varchar(255) not null,
+        url TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    create table destination (
+        is_deleted boolean not null,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        trip_id bigint not null,
+        updated_at timestamp(6),
+        address TEXT,
+        contact_number varchar(255),
+        description TEXT,
+        name varchar(255) not null,
+        url TEXT,
+        primary key (id)
+    )
+2025-07-27T15:35:53.883-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table document (
+        is_active boolean not null,
+        is_deleted boolean not null,
+        doc_expiration_date timestamp(6),
+        id bigint generated by default as identity,
+        persona_id bigint not null,
+        country varchar(255) not null,
+        doc_number varchar(255),
+        expiration_date varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table document (
+        is_active boolean not null,
+        is_deleted boolean not null,
+        doc_expiration_date timestamp(6),
+        id bigint generated by default as identity,
+        persona_id bigint not null,
+        country varchar(255) not null,
+        doc_number varchar(255),
+        expiration_date varchar(255),
+        primary key (id)
+    )
+2025-07-27T15:35:53.890-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table driver_license (
+        is_id boolean not null,
+        is_teen boolean not null,
+        id bigint not null,
+        state varchar(255),
+        type varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table driver_license (
+        is_id boolean not null,
+        is_teen boolean not null,
+        id bigint not null,
+        state varchar(255),
+        type varchar(255) not null,
+        primary key (id)
+    )
+2025-07-27T15:35:53.898-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table passport (
+        is_biometric boolean,
+        id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table passport (
+        is_biometric boolean,
+        id bigint not null,
+        primary key (id)
+    )
+2025-07-27T15:35:53.903-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table persona (
+        age integer not null,
+        is_deleted boolean not null,
+        id bigint generated by default as identity,
+        user_id bigint not null,
+        ethnicity varchar(255),
+        first_name varchar(255) not null,
+        gender varchar(255) not null,
+        last_name varchar(255) not null,
+        middle_name varchar(255),
+        nationality varchar(255),
+        preference varchar(255),
+        special_need varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table persona (
+        age integer not null,
+        is_deleted boolean not null,
+        id bigint generated by default as identity,
+        user_id bigint not null,
+        ethnicity varchar(255),
+        first_name varchar(255) not null,
+        gender varchar(255) not null,
+        last_name varchar(255) not null,
+        middle_name varchar(255),
+        nationality varchar(255),
+        preference varchar(255),
+        special_need varchar(255),
+        primary key (id)
+    )
+2025-07-27T15:35:53.910-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table transportation (
+        id bigint not null,
+        number varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table transportation (
+        id bigint not null,
+        number varchar(255),
+        primary key (id)
+    )
+2025-07-27T15:35:53.913-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table trip (
+        budget float4,
+        end_date date,
+        is_deleted boolean not null,
+        start_date date,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        user_id bigint not null,
+        description TEXT,
+        title varchar(255) not null,
+        trip_status varchar(255) check (trip_status in ('PLANNING','CONFIRMED','IN_PROGRESS','COMPLETED','CANCELLED')),
+        type varchar(255) not null check (type in ('BUSINESS','LEISURE','FAMILY','OTHER')),
+        primary key (id)
+    )
+Hibernate: 
+    create table trip (
+        budget float4,
+        end_date date,
+        is_deleted boolean not null,
+        start_date date,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        user_id bigint not null,
+        description TEXT,
+        title varchar(255) not null,
+        trip_status varchar(255) check (trip_status in ('PLANNING','CONFIRMED','IN_PROGRESS','COMPLETED','CANCELLED')),
+        type varchar(255) not null check (type in ('BUSINESS','LEISURE','FAMILY','OTHER')),
+        primary key (id)
+    )
+2025-07-27T15:35:53.922-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table trip_persona (
+        persona_id bigint not null,
+        trip_id bigint not null
+    )
+Hibernate: 
+    create table trip_persona (
+        persona_id bigint not null,
+        trip_id bigint not null
+    )
+2025-07-27T15:35:53.926-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table users (
+        is_deleted boolean not null,
+        is_verified boolean not null,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        role varchar(255) not null check (role in ('ADMIN','USER')),
+        username varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        is_deleted boolean not null,
+        is_verified boolean not null,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        role varchar(255) not null check (role in ('ADMIN','USER')),
+        username varchar(255) not null,
+        primary key (id)
+    )
+2025-07-27T15:35:53.936-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    create table visa (
+        is_deleted boolean not null,
+        id bigint generated by default as identity,
+        passport_id bigint not null,
+        country varchar(255) not null,
+        expiration_date varchar(255),
+        number varchar(255),
+        type varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table visa (
+        is_deleted boolean not null,
+        id bigint generated by default as identity,
+        passport_id bigint not null,
+        country varchar(255) not null,
+        expiration_date varchar(255),
+        number varchar(255),
+        type varchar(255),
+        primary key (id)
+    )
+2025-07-27T15:35:53.943-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists accommodation 
+       add constraint FK47hfepcgn6qs14fuxdop9ckiy 
+       foreign key (id) 
+       references activity
+Hibernate: 
+    alter table if exists accommodation 
+       add constraint FK47hfepcgn6qs14fuxdop9ckiy 
+       foreign key (id) 
+       references activity
+2025-07-27T15:35:53.948-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists activity 
+       add constraint FKfjid11fh3x9bbr2c78m2o1aks 
+       foreign key (destination_id) 
+       references destination
+Hibernate: 
+    alter table if exists activity 
+       add constraint FKfjid11fh3x9bbr2c78m2o1aks 
+       foreign key (destination_id) 
+       references destination
+2025-07-27T15:35:53.952-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists activity 
+       add constraint FK14q3exfg0yp2b8lb2fmbnxyde 
+       foreign key (trip_id) 
+       references trip
+Hibernate: 
+    alter table if exists activity 
+       add constraint FK14q3exfg0yp2b8lb2fmbnxyde 
+       foreign key (trip_id) 
+       references trip
+2025-07-27T15:35:53.955-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists destination 
+       add constraint FKlypn6unsmxpjemo6bs4ifa90l 
+       foreign key (trip_id) 
+       references trip
+Hibernate: 
+    alter table if exists destination 
+       add constraint FKlypn6unsmxpjemo6bs4ifa90l 
+       foreign key (trip_id) 
+       references trip
+2025-07-27T15:35:53.958-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists document 
+       add constraint FKhxb0mytjif1cdyrmaowj7o3gs 
+       foreign key (persona_id) 
+       references persona
+Hibernate: 
+    alter table if exists document 
+       add constraint FKhxb0mytjif1cdyrmaowj7o3gs 
+       foreign key (persona_id) 
+       references persona
+2025-07-27T15:35:53.961-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists driver_license 
+       add constraint FK4uquqovui7qm8mp1i2fhpbgcu 
+       foreign key (id) 
+       references document
+Hibernate: 
+    alter table if exists driver_license 
+       add constraint FK4uquqovui7qm8mp1i2fhpbgcu 
+       foreign key (id) 
+       references document
+2025-07-27T15:35:53.964-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists passport 
+       add constraint FKqbo6bxdgsmnlmw506g5uelv14 
+       foreign key (id) 
+       references document
+Hibernate: 
+    alter table if exists passport 
+       add constraint FKqbo6bxdgsmnlmw506g5uelv14 
+       foreign key (id) 
+       references document
+2025-07-27T15:35:53.966-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists persona 
+       add constraint FKdq2m6laiifgvrbylre9r4yw45 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists persona 
+       add constraint FKdq2m6laiifgvrbylre9r4yw45 
+       foreign key (user_id) 
+       references users
+2025-07-27T15:35:53.969-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists transportation 
+       add constraint FKth5ar5rlcqeceb4it5ymaw3s0 
+       foreign key (id) 
+       references activity
+Hibernate: 
+    alter table if exists transportation 
+       add constraint FKth5ar5rlcqeceb4it5ymaw3s0 
+       foreign key (id) 
+       references activity
+2025-07-27T15:35:53.973-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip 
+       add constraint FK8qawa54m8w5olt1mrn50re3yw 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists trip 
+       add constraint FK8qawa54m8w5olt1mrn50re3yw 
+       foreign key (user_id) 
+       references users
+2025-07-27T15:35:53.976-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip_persona 
+       add constraint FKmj4uv9pjvtyuuhf3m99ljldwe 
+       foreign key (persona_id) 
+       references persona
+Hibernate: 
+    alter table if exists trip_persona 
+       add constraint FKmj4uv9pjvtyuuhf3m99ljldwe 
+       foreign key (persona_id) 
+       references persona
+2025-07-27T15:35:53.978-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists trip_persona 
+       add constraint FKmcl0re8f6r8g42j007e1eybgc 
+       foreign key (trip_id) 
+       references trip
+Hibernate: 
+    alter table if exists trip_persona 
+       add constraint FKmcl0re8f6r8g42j007e1eybgc 
+       foreign key (trip_id) 
+       references trip
+2025-07-27T15:35:53.981-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists visa 
+       add constraint FK6xrho99g093yfl4w8eon15rgd 
+       foreign key (passport_id) 
+       references passport
+Hibernate: 
+    alter table if exists visa 
+       add constraint FK6xrho99g093yfl4w8eon15rgd 
+       foreign key (passport_id) 
+       references passport
+2025-07-27T15:35:53.985-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-27T15:35:54.366-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-27T15:35:55.114-04:00  WARN 27324 --- [trip-planner-backend] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-27T15:35:55.161-04:00  WARN 27324 --- [trip-planner-backend] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 59694e3e-005c-4066-872f-ffbb8373900f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-27T15:35:55.173-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-27T15:35:55.883-04:00  INFO 27324 --- [trip-planner-backend] [    Test worker] c.s.t.TripControllerTest                 : Started TripControllerTest in 7.07 seconds (process running for 8.615)
+TestInitializer
+2025-07-27T15:35:55.936-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (created_at, email, is_deleted, is_verified, password, role, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users
+        (created_at, email, is_deleted, is_verified, password, role, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-07-27T15:35:56.006-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        trip
+        (budget, created_at, description, end_date, is_deleted, start_date, trip_status, title, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        trip
+        (budget, created_at, description, end_date, is_deleted, start_date, trip_status, title, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-27T15:35:56.015-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        activity
+        (booking_reference, cost, created_at, description, destination_id, end_time, is_deleted, name, notes, start_time, trip_id, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        activity
+        (booking_reference, cost, created_at, description, destination_id, end_time, is_deleted, name, notes, start_time, trip_id, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-27T15:35:56.042-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    select
+        t1_0.id,
+        t1_0.budget,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.end_date,
+        t1_0.is_deleted,
+        t1_0.start_date,
+        t1_0.trip_status,
+        t1_0.title,
+        t1_0.type,
+        t1_0.updated_at,
+        t1_0.user_id,
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_deleted,
+        u1_0.is_verified,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        trip t1_0 
+    join
+        users u1_0 
+            on u1_0.id=t1_0.user_id 
+    where
+        t1_0.id=?
+Hibernate: 
+    select
+        t1_0.id,
+        t1_0.budget,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.end_date,
+        t1_0.is_deleted,
+        t1_0.start_date,
+        t1_0.trip_status,
+        t1_0.title,
+        t1_0.type,
+        t1_0.updated_at,
+        t1_0.user_id,
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_deleted,
+        u1_0.is_verified,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        trip t1_0 
+    join
+        users u1_0 
+            on u1_0.id=t1_0.user_id 
+    where
+        t1_0.id=?
+2025-07-27T15:35:56.064-04:00 DEBUG 27324 --- [trip-planner-backend] [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.trip_id,
+        a1_0.id,
+        case 
+            when a1_1.id is not null 
+                then 1 
+            when a1_2.id is not null 
+                then 2 
+            when a1_0.id is not null 
+                then 0 
+        end,
+        a1_0.booking_reference,
+        a1_0.cost,
+        a1_0.created_at,
+        a1_0.description,
+        d1_0.id,
+        d1_0.address,
+        d1_0.contact_number,
+        d1_0.created_at,
+        d1_0.description,
+        d1_0.is_deleted,
+        d1_0.name,
+        d1_0.trip_id,
+        t1_0.id,
+        t1_0.budget,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.end_date,
+        t1_0.is_deleted,
+        t1_0.start_date,
+        t1_0.trip_status,
+        t1_0.title,
+        t1_0.type,
+        t1_0.updated_at,
+        t1_0.user_id,
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_deleted,
+        u1_0.is_verified,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username,
+        d1_0.updated_at,
+        d1_0.url,
+        a1_0.end_time,
+        a1_0.is_deleted,
+        a1_0.name,
+        a1_0.notes,
+        a1_0.start_time,
+        a1_0.updated_at,
+        a1_1.has_breakfast,
+        a1_1.has_shuttle,
+        a1_2.number 
+    from
+        activity a1_0 
+    left join
+        accommodation a1_1 
+            on a1_0.id=a1_1.id 
+    left join
+        transportation a1_2 
+            on a1_0.id=a1_2.id 
+    left join
+        destination d1_0 
+            on d1_0.id=a1_0.destination_id 
+    left join
+        trip t1_0 
+            on t1_0.id=d1_0.trip_id 
+    left join
+        users u1_0 
+            on u1_0.id=t1_0.user_id 
+    where
+        a1_0.trip_id=?
+Hibernate: 
+    select
+        a1_0.trip_id,
+        a1_0.id,
+        case 
+            when a1_1.id is not null 
+                then 1 
+            when a1_2.id is not null 
+                then 2 
+            when a1_0.id is not null 
+                then 0 
+        end,
+        a1_0.booking_reference,
+        a1_0.cost,
+        a1_0.created_at,
+        a1_0.description,
+        d1_0.id,
+        d1_0.address,
+        d1_0.contact_number,
+        d1_0.created_at,
+        d1_0.description,
+        d1_0.is_deleted,
+        d1_0.name,
+        d1_0.trip_id,
+        t1_0.id,
+        t1_0.budget,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.end_date,
+        t1_0.is_deleted,
+        t1_0.start_date,
+        t1_0.trip_status,
+        t1_0.title,
+        t1_0.type,
+        t1_0.updated_at,
+        t1_0.user_id,
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_deleted,
+        u1_0.is_verified,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username,
+        d1_0.updated_at,
+        d1_0.url,
+        a1_0.end_time,
+        a1_0.is_deleted,
+        a1_0.name,
+        a1_0.notes,
+        a1_0.start_time,
+        a1_0.updated_at,
+        a1_1.has_breakfast,
+        a1_1.has_shuttle,
+        a1_2.number 
+    from
+        activity a1_0 
+    left join
+        accommodation a1_1 
+            on a1_0.id=a1_1.id 
+    left join
+        transportation a1_2 
+            on a1_0.id=a1_2.id 
+    left join
+        destination d1_0 
+            on d1_0.id=a1_0.destination_id 
+    left join
+        trip t1_0 
+            on t1_0.id=d1_0.trip_id 
+    left join
+        users u1_0 
+            on u1_0.id=t1_0.user_id 
+    where
+        a1_0.trip_id=?
+Activity 1
+2025-07-27T15:35:56.093-04:00  WARN 27324 --- [trip-planner-backend] [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.springboot.trip_planner_backend.TripControllerTest@5da1f9b9]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.springboot.trip_planner_backend.TripControllerTest': Unsatisfied dependency expressed through field 'graphQlTester': No qualifying bean of type 'org.springframework.graphql.test.tester.GraphQlTester' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:405) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156) ~[spring-test-6.2.9.jar:6.2.9]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-6.2.9.jar:6.2.9]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.9.jar:6.2.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.9.jar:6.2.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.graphql.test.tester.GraphQlTester' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.9.jar:6.2.9]
+	... 97 common frames omitted
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
 import com.springboot.trip_planner_backend.entity.Persona;
 import com.springboot.trip_planner_backend.entity.Trip;
+import com.springboot.trip_planner_backend.inputType.TripInput;
 import com.springboot.trip_planner_backend.service.PersonaService;
 import com.springboot.trip_planner_backend.service.TripService;
 
@@ -32,6 +34,50 @@ public class TripController{
     @QueryMapping
     public List<Trip> getAllTripsByUserId(@Argument Long userId) {
         return tripService.findByUserId(userId);
+    }
+
+    @QueryMapping
+    public List<Trip> getPlanningTripByUserId(@Argument Long userId) {
+        return tripService.findPlanningTripByUserId(userId);
+    }
+
+    @QueryMapping
+    public List<Trip> getCompletedTripByUserId(@Argument Long userId) {
+        return tripService.findCompletedTripByUserId(userId);
+    }
+
+    @QueryMapping
+    public List<Trip> getCancelledTripByUserId(@Argument Long userId) {
+        return tripService.findCancelledTripByUserId(userId);
+    }
+
+    @MutationMapping
+    public Trip createTrip(@Argument TripInput tripInput) {
+        Trip trip = new Trip();
+        trip.setTitle(tripInput.getTitle());
+        trip.setStatus(tripInput.getStatus());
+        trip.setType(tripInput.getType());
+        trip.setBudget(tripInput.getBudget());
+        trip.setPersonas(tripInput.getPersonas());
+        trip.setActivities(tripInput.getActivities());
+        return tripService.save(trip);
+    }
+
+    @MutationMapping
+    public Trip updateTrip(@Argument Long id, @Argument TripInput tripInput) {
+        Trip trip = tripService.findById(id);
+        trip.setTitle(tripInput.getTitle());
+        trip.setStatus(tripInput.getStatus());
+        trip.setType(tripInput.getType());
+        trip.setBudget(tripInput.getBudget());
+        trip.setPersonas(tripInput.getPersonas());
+        trip.setActivities(tripInput.getActivities());
+        return tripService.save(trip);
+    }
+
+    @MutationMapping
+    public void deleteTrip(@Argument Long id) {
+        tripService.deleteTrip(id);
     }
     
 }

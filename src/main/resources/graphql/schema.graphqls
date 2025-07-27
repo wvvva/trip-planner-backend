@@ -1,0 +1,179 @@
+type Query {
+    # Trip
+    getTrip(id: ID!): Trip
+    getNMostRecentTripByUserId(userId: ID!, n: Int!): [Trip]
+    getAllTripsByUserId(userId: ID!): [Trip]
+
+    getPlanningTripByUserId(userId: ID!): [Trip]
+    getConfirmedTripByUserId(userId: ID!): [Trip]
+    getInProgressTripByUserId(userId: ID!): [Trip]
+    getCompletedTripByUserId(userId: ID!): [Trip]
+    getCancelledTripByUserId(userId: ID!): [Trip]
+    
+    # Activity
+    getActivity(id: ID!): Activity
+    getAllActivitiesByTripId(tripId: ID!): [Activity]
+
+    # Persona
+    getPersona(id: ID!): Persona
+    getAllPersonasByUserId(userId: ID!): [Persona]
+    getPersonaByTripId(tripId: ID!): [Persona]
+}
+
+type Mutation {
+    createTrip(tripInput: TripInput!): Trip
+    updateTrip(id: ID!, tripInput: TripInput!): Trip
+    deleteTrip(id: ID!): Trip
+
+    createActivity(activityInput: ActivityInput!): Activity
+    updateActivity(id: ID!, activityInput: ActivityInput!): Activity
+    deleteActivity(id: ID!): Activity
+
+    createPersona(personaInput: PersonaInput!): Persona
+    updatePersona(id: ID!, personaInput: PersonaInput!): Persona
+    deletePersona(id: ID!): Persona
+}
+
+type Trip {
+    id: ID!
+    title: String!
+    userId: ID!
+    createdAt: String!
+    updatedAt: String!
+
+    status: TripStatus
+    budget: Float
+    type: TripType
+
+    activities: [Activity]
+    personas: [Persona]
+}
+
+input TripInput {
+    title: String!
+    status: TripStatus
+    budget: Float
+    type: TripType
+    personaIds: [ID!]
+    activityIds: [ID!]
+}
+
+type Activity {
+    id: ID!
+    title: String!
+    tripId: ID!
+
+    bookingReference: String
+    notes: String
+    cost: Float
+
+    startTime: String
+    endTime: String
+
+    createdAt: String!
+    updatedAt: String!
+    isDeleted: Boolean
+}
+
+input ActivityInput {
+    activityId: ID!
+    title: String!
+    description: String
+    tripId: ID!
+    bookingReference: String
+    notes: String
+    cost: Float
+    startTime: String
+    endTime: String
+}
+
+# input TransportationInput {
+#     id: ID!
+#     number: String!
+#     description: String
+# }
+
+type Persona {
+    id: ID!
+
+    firstName: String!
+    middleName: String!
+    lastName: String!
+    age: Int!
+    gender: String!
+    nationality: String!
+    ethnicity: String!
+
+    specialNeed: String
+    preference: String
+
+    createdAt: String!
+    updatedAt: String!
+
+    documents: [Document]
+}
+
+input PersonaInput {
+    firstName: String!
+    lastName: String!
+    age: Int!
+    gender: String!
+    nationality: String!
+    ethnicity: String!
+    specialNeed: String
+    preference: String
+    documentIds: [ID!]
+}
+
+# Enum definitions
+enum TripStatus {
+    PLANNING
+    CONFIRMED
+    IN_PROGRESS
+    COMPLETED
+    CANCELLED
+}
+
+enum TripType {
+    BUSINESS
+    LEISURE
+    FAMILY
+    OTHER
+}
+
+# Type definitions
+type Destination {
+    id: ID!
+    name: String!
+    description: String
+    address: String
+    contactNumber: String
+    url: String
+    createdAt: String!
+    updatedAt: String!
+    isDeleted: Boolean!
+}
+
+type Transportation {
+    id: ID!
+    number: String
+    description: String
+    isDeleted: Boolean!
+}
+
+type Accommodation {
+    id: ID!
+    hasBreakfast: Boolean
+    hasShuttle: Boolean
+    isDeleted: Boolean!
+}
+
+type Document {
+    id: ID!
+    docNumber: String
+    docExpirationDate: String
+    expirationDate: String
+    country: String!
+    isActive: Boolean!
+    isDeleted: Boolean!
+}

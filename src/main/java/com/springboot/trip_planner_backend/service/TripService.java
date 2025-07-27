@@ -56,8 +56,10 @@ public class TripService {
         return tripRepository.save(trip);
     }
 
-    public void delete(Trip trip) {
-        trip.setIsDeleted(true);
-        tripRepository.save(trip);
+    public void deleteTrip(Long id) {
+        Trip trip = findById(id);
+        if (trip != null) {
+            tripRepository.delete(trip);
+        }
     }
 } 
