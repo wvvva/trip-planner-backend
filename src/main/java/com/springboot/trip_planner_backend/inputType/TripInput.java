@@ -7,9 +7,13 @@ import com.springboot.trip_planner_backend.entity.Persona;
 import com.springboot.trip_planner_backend.entity.Trip.TripStatus;
 import com.springboot.trip_planner_backend.entity.Trip.TripType;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class TripInput {
     private String title;
     private TripStatus status;
